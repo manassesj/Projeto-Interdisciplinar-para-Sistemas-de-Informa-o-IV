@@ -5,8 +5,6 @@ const axios = require("axios");
 const AWS = require("aws-sdk");
 
 const dateTime = require("./utils/dateTime");
-const { Station } = require("./models/Station");
-const { json } = require("body-parser");
 
 const kinesis = new AWS.Kinesis();
 const app = express();
@@ -35,7 +33,7 @@ app.get("/", async (request, response) => {
             };
 
             record = {
-                Data: json.(dado),
+                Data: JSON.stringify(dado),
                 PartitionKey: station.DC_NOME,
             };
 

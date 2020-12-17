@@ -49,17 +49,15 @@ app.get("/", async (request, response) => {
             StreamName: "project-4-data-stream",
         };
 
-        console.log(station_list);
+        console.log(teste);
 
         kinesis.putRecords(recordsParams, function (err, data) {
             if (err) {
                 return response.status(400).json({ error: err });
             } else {
-                console.log(recordsParams);
-
                 return response.status(200).json({
                     data: data,
-                    dataFrame: [station_list[1], station_list[2]],
+                    dataFrame: [station_list[0], station_list[1]],
                 });
             }
         });

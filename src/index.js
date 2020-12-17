@@ -26,18 +26,20 @@ app.get("/", async (request, response) => {
         var station_list = [];
 
         data.map((station) => {
-            dado = {
-                name: station.DC_NOME,
-                temp_air: station.TEM_INS,
-                humidity_air: station.UMD_INS,
-            };
+            if (station.UF == "PE") {
+                dado = {
+                    name: station.DC_NOME,
+                    temp_air: station.TEM_INS,
+                    humidity_air: station.UMD_INS,
+                };
 
-            record = {
-                Data: JSON.stringify(dado),
-                PartitionKey: station.DC_NOME,
-            };
+                record = {
+                    Data: JSON.stringify(dado),
+                    PartitionKey: station.DC_NOME,
+                };
 
-            station_list.push(record);
+                station_list.push(record);
+            }
         });
 
         teste = [station_list[0], station_list[1]];
@@ -47,13 +49,18 @@ app.get("/", async (request, response) => {
             StreamName: "project-4-data-stream",
         };
 
-        await kinesis.putRecords(recordsParams, function (err, data) {
+        console.log(station_list);
+
+        kinesis.putRecords(recordsParams, function (err, data) {
             if (err) {
                 return response.status(400).json({ error: err });
             } else {
-                return response
-                    .status(200)
-                    .json({ data: data, dataFrame: recordsParams });
+                console.log(recordsParams);
+
+                return response.status(200).json({
+                    data: data,
+                    dataFrame: [station_list[1], station_list[2]],
+                });
             }
         });
     } catch (error) {

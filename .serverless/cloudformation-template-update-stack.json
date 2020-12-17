@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/firsttry/dev/1608230057103-2020-12-17T18:34:17.103Z/firsttry.zip"
+          "S3Key": "serverless/firsttry/dev/1608232884351-2020-12-17T19:21:24.351Z/firsttry.zip"
         },
         "FunctionName": "firsttry-dev-app-api",
         "Handler": "handler.handler",
@@ -179,14 +179,14 @@
         "AppDashapiLogGroup"
       ]
     },
-    "AppDashapiLambdaVersionlnzdFpWeVeVMenJ9CIKqvUSFyBviYU6NkzfWtkDJy58": {
+    "AppDashapiLambdaVersioniYUtLaRLXO2n3kQ8Z7U7TsjbbQIpoz1OEAmYzSk2Nw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppDashapiLambdaFunction"
         },
-        "CodeSha256": "M+AjS3MqeIauF3Wxi3yvesIKIoJUEpiy4HNk5I4HIWM="
+        "CodeSha256": "NNgB7gBDT1qXim8LL3MW3hTQRO5wdS89JJ4FqjqnBx8="
       }
     },
     "ApiGatewayRestApi": {
@@ -295,7 +295,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1608230043775": {
+    "ApiGatewayDeployment1608232880046": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -355,7 +355,7 @@
     "AppDashapiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppDashapiLambdaVersionlnzdFpWeVeVMenJ9CIKqvUSFyBviYU6NkzfWtkDJy58"
+        "Ref": "AppDashapiLambdaVersioniYUtLaRLXO2n3kQ8Z7U7TsjbbQIpoz1OEAmYzSk2Nw"
       }
     },
     "ServiceEndpoint": {

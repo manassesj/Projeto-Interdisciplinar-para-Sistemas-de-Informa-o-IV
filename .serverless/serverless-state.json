@@ -174,7 +174,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/firsttry/dev/1608232884351-2020-12-17T19:21:24.351Z/firsttry.zip"
+                "S3Key": "serverless/firsttry/dev/1609948310314-2021-01-06T15:51:50.314Z/firsttry.zip"
               },
               "FunctionName": "firsttry-dev-app-api",
               "Handler": "handler.handler",
@@ -192,14 +192,14 @@
               "AppDashapiLogGroup"
             ]
           },
-          "AppDashapiLambdaVersioniYUtLaRLXO2n3kQ8Z7U7TsjbbQIpoz1OEAmYzSk2Nw": {
+          "AppDashapiLambdaVersiond4pk1TjBu4xRk10VLa5ROwHhlKMNj22AAIP4NCz5TY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppDashapiLambdaFunction"
               },
-              "CodeSha256": "NNgB7gBDT1qXim8LL3MW3hTQRO5wdS89JJ4FqjqnBx8="
+              "CodeSha256": "xl9DdMrEr2uu9Ev5DeyZQJY+9/IacQZcflsn6pFDl4s="
             }
           },
           "ApiGatewayRestApi": {
@@ -308,7 +308,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1608232880046": {
+          "ApiGatewayDeployment1609948298527": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -368,7 +368,7 @@
           "AppDashapiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppDashapiLambdaVersioniYUtLaRLXO2n3kQ8Z7U7TsjbbQIpoz1OEAmYzSk2Nw"
+              "Ref": "AppDashapiLambdaVersiond4pk1TjBu4xRk10VLa5ROwHhlKMNj22AAIP4NCz5TY"
             }
           },
           "ServiceEndpoint": {
@@ -518,7 +518,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AppDashapiLambdaVersioniYUtLaRLXO2n3kQ8Z7U7TsjbbQIpoz1OEAmYzSk2Nw"
+        "versionLogicalId": "AppDashapiLambdaVersiond4pk1TjBu4xRk10VLa5ROwHhlKMNj22AAIP4NCz5TY"
       }
     },
     "configValidationMode": "warn",
@@ -540,7 +540,7 @@
     "artifact": "/home/manasses/projects/faculdade/projeto_4/first_try/Projeto Interdisciplinar para Sistemas de Informação IV/.serverless/firsttry.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/firsttry/dev/1608232884351-2020-12-17T19:21:24.351Z",
+    "artifactDirectoryName": "serverless/firsttry/dev/1609948310314-2021-01-06T15:51:50.314Z",
     "artifact": "firsttry.zip"
   }
 }

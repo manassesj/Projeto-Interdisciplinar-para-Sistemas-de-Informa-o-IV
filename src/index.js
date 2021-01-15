@@ -42,10 +42,10 @@ app.get("/", async (request, response) => {
             }
         });
 
-        teste = [station_list[0], station_list[1], station_list[3]];
+        //teste = [station_list[0], station_list[1], station_list[3]];
 
         var recordsParams = {
-            Records: teste,
+            Records: station_list,
             StreamName: "project-4-data-stream",
         };
 
@@ -57,7 +57,7 @@ app.get("/", async (request, response) => {
                 console.log(recordsParams);
                 return response.status(200).json({
                     data: data,
-                    dataFrame: teste,
+                    //dataFrame: teste,
                 });
             }
         });

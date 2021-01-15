@@ -12,7 +12,7 @@ function dateTime() {
 
     while (index < list_result.length) {
         if (list_result[index] < 10) {
-            list_result[index] = `0${list_result[index]}`;
+            list_result[index] = parseInt(`0${list_result[index]}`);
         }
         index++;
     }
